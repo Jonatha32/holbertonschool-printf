@@ -1,5 +1,10 @@
 #include "main.h"
 
+int _write_char(char c)
+{
+  return write(1, &c, 1);
+}
+
 int print_char(va_list a)
 {
   char c = va_arg(a, int);
@@ -25,9 +30,4 @@ int print_porcentaje(va_list a)
 {
   (void)a;
   return _write_char('%');
-}
-
-int _write_char(char c)
-{
-  return write(1, &c, 1);
 }
