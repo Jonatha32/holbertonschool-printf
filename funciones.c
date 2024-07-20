@@ -1,33 +1,57 @@
 #include "main.h"
-
+/**
+ * _write_char - usa write para imprimir el caracter
+ * @c: caracter
+ *
+ * Return: devuolver el numero de caracteres
+ */
 int _write_char(char c)
 {
-  return write(1, &c, 1);
+	return (write(1, &c, 1));
 }
 
+/**
+ * print_char - funcion para %c
+ * @a: argumento
+ *
+ * Return: write_char
+ */
 int print_char(va_list a)
 {
-  char c = va_arg(a, int);
-  return (_write_char(c));
+	char c = va_arg(a, int);
+
+	return (_write_char(c));
 }
 
+/**
+ * print_string - funcion para %s
+ * @a: argumento
+ *
+ * Return: i
+ */
 int print_string(va_list a)
 {
-  char *str = va_arg(a, char *);
-  int i = 0;
+	char *str = va_arg(a, char *);
+	int i = 0;
 
-  if (str == NULL)
-    str = "(NULL)";
-  while (str[i] != '\0')
-  {
-    _write_char(str[i]);
-    i++;
-  }
-  return (i);
+	if (str == NULL)
+	str = "(NULL)";
+	while (str[i] != '\0')
+	{
+		_write_char(str[i]);
+		i++;
+	}
+	return (i);
 }
 
+/**
+ * print_porcentaje - funcion para %%
+ * @a: argumento
+ *
+ * Return: write_char %
+ */
 int print_porcentaje(va_list a)
 {
-  (void)a;
-  return _write_char('%');
+	(void)a;
+	return (_write_char('%'));
 }
