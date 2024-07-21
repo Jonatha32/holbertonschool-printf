@@ -35,18 +35,15 @@ char *itoa(int n, char *str)
 	int c = get_digit(n);
 	int negative = n < 0;
 	int i;
-if (negative)
+	unsigned int num;
+
+	if (negative)
 	{
-	if (n == INT_MAX)
-	{
-	n = INT_MAX;
+		num = -n;
+		c++;
 	}
 	else
-	{
-	n = -n;
-	}
-	c++;
-	}
+		num = n;
 	str[c] = '\0';
 	if (n == 0)
 	{
@@ -55,16 +52,13 @@ if (negative)
 	}
 	for (i = c - 1; i >= 0; i--)
 	{
-		str[i] = (n % 10) + '0';
-		n /= 10;
-	}
-	if (negative)
-	{
-	if (n == INT_MAX)
-	{
-	str[c - 1] = '8';
-	}
-	str[0] = '-';
+		str[i] = (num % 10) + '0';
+		num /= 10;
+		if (num == 0 && negative)
+		{
+			str[0] = '-';
+			break;
+		}
 	}
 	return (str);
 }

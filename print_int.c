@@ -13,15 +13,14 @@ int print_int(va_list a)
 {
 	int n = va_arg(a, int);
 	int l = get_digit(n);
-
 	char *b = (char *)malloc(l + 2);
-
-	char *s = b;
+	char *s;
 	int i = 0;
 
 	if (b == NULL)
 		return (-1);
 	itoa(n, b);
+	s = b;
 
 	while (*s != '\0')
 	{
