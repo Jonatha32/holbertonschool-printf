@@ -1,5 +1,5 @@
+#include <limits.h>
 #include <stdlib.h>
-
 /**
  * get_digit - contar los digitos
  * @a: argumento
@@ -35,17 +35,23 @@ char *itoa(int n, char *str)
 	int c = get_digit(n);
 	int negative = n < 0;
 	int i;
-
+if (negative)
+	{
+	if (n == INT_MAX)
+	{
+	n = INT_MAX;
+	}
+	else
+	{
+	n = -n;
+	}
+	c++;
+	}
 	str[c] = '\0';
 	if (n == 0)
 	{
 		str[0] = '0';
 		return (str);
-	}
-	if (negative)
-	{
-		n = -n;
-		c++;
 	}
 	for (i = c - 1; i >= 0; i--)
 	{
@@ -54,7 +60,11 @@ char *itoa(int n, char *str)
 	}
 	if (negative)
 	{
-		str[0] = '-';
+	if (n == INT_MAX)
+	{
+	str[c - 1] = '8';
+	}
+	str[0] = '-';
 	}
 	return (str);
 }

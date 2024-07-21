@@ -14,7 +14,7 @@ int print_int(va_list a)
 	int n = va_arg(a, int);
 	int l = get_digit(n);
 
-	char *b = (char *)malloc(l + 1);
+	char *b = (char *)malloc(l + 2);
 
 	char *s = b;
 	int i = 0;
