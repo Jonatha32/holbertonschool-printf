@@ -30,6 +30,10 @@ int _printf(const char *format, ...)
 				case '%':
 					b += print_porcentaje(a);
 					break;
+				case 'i':
+				case 'd':
+					b += print_int(a);
+					break;
 				default:
 					b += _write_char('%');
 					b += _write_char(format[i]);
