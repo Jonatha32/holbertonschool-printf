@@ -28,6 +28,8 @@ _printf supports the following format specifiers:
 ## Examples :dart:
 Here are some examples of how to use _printf:
 
+```
+
 #include "main.h"
 
 /**
@@ -58,3 +60,5 @@ int main(void)
   return (0);
   
 }
+```
+
