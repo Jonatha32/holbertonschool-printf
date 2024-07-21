@@ -2,6 +2,10 @@
 
 Write your own printf function.
 
+## What is printf? 😕
+
+The printf function is a standard library function in the C programming language, used for output formatting. It is declared in the stdio.h header file and stands for "print formatted." The primary purpose of printf is to send formatted output to the standard output stream, typically the console or terminal.
+
 ![alt text](https://github.com/Jonatha32/holbertonschool-printf/blob/main/Inicio.jpg)
 
 ## Description of the Project 📝
