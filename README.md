@@ -61,4 +61,6 @@ int main(void)
   
 }
 ```
-
+## Authors 😎
+* **Fabrizzio Oviedo**
+* **Jonathan Pérez**
