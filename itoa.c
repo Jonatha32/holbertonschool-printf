@@ -37,7 +37,7 @@ char *itoa(int n, char *str)
 	int i;
 if (negative)
 	{
-	if (n == INT_MAX)
+	if (n == INT_MIN)
 	{
 	n = INT_MAX;
 	}
