@@ -39,8 +39,14 @@ char *itoa(int n, char *str)
 
 	if (negative)
 	{
+<<<<<<< HEAD
 		num = -n;
 		c++;
+=======
+	if (n == INT_MIN)
+	{
+	n = INT_MAX;
+>>>>>>> fac799aaa54f987bb549bddacbcc1885c1508823
 	}
 	else
 		num = n;
