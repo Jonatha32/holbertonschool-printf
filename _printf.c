@@ -1,7 +1,5 @@
 #include "main.h"
-#include <stddef.h>
-#include <stdlib.h>
-#include <srdarg.h>
+#include <stdarg.h>
 /**
  * _printf - printf by jona and fabri
  * @format: format

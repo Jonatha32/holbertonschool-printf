@@ -16,11 +16,12 @@ int print_int(va_list a)
 
 	char *b = (char *)malloc(l + 1);
 
+	char *s = b;
+	int i = 0;
+
 	if (b == NULL)
 		return (-1);
 	itoa(n, b);
-	char *s = b;
-	int i = 0;
 
 	while (*s != '\0')
 	{
