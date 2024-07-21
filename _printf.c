@@ -23,6 +23,7 @@ int _printf(const char *format, ...)
 			{
 				va_end(a);
 				return (-1);
+			}
 			switch (format[i])
 			{
 				case 'c':
