@@ -1,6 +1,25 @@
 # _PRINTF PROJECT
 
-Write your own printf function.
+Write your own printf function. 🦁
+
+### Tasks: 
+
+Write a function that produces results according to the format.
+
+Return: the number of characters printed (excluding the null byte used to terminate the output to strings).
+write the output to stdout, the standard output stream
+
+You must handle the following conversion specifiers:
+
+%c
+
+%s
+
+%%
+
+%d
+
+%i
 
 ## What is printf? 😕
 
