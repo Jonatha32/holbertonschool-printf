@@ -39,23 +39,19 @@ char *itoa(int n, char *str)
 
 	if (negative)
 	{
-<<<<<<< HEAD
 		num = -n;
 		c++;
-=======
-	if (n == INT_MIN)
-	{
-	n = INT_MAX;
->>>>>>> fac799aaa54f987bb549bddacbcc1885c1508823
 	}
 	else
 		num = n;
+
 	str[c] = '\0';
 	if (n == 0)
 	{
 		str[0] = '0';
 		return (str);
 	}
+
 	for (i = c - 1; i >= 0; i--)
 	{
 		str[i] = (num % 10) + '0';
