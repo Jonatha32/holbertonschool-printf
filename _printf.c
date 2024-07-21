@@ -13,7 +13,6 @@ int _printf(const char *format, ...)
 	int b = 0;
 
 	va_start(a, format);
-
 	for (i = 0; format[i] != '\0'; i++)
 	{
 		if (format[i] == '%')
@@ -45,9 +44,7 @@ int _printf(const char *format, ...)
 			}
 		}
 		else
-		{
 			b += _write_char(format[i]);
-		}
 	}
 	va_end(a);
 	return (b);
