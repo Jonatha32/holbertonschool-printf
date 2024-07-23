@@ -8,17 +8,17 @@
  */
 int get_digit(int a)
 {
-	int b = 0;
+	int b = 0; //contador de digitos
 
-	if (a == 0)
+	if (a == 0) //si a es 0, devolvemos 1, porque el numero 0 es un solo digito
 	{
 		return (1);
 	}
 
-	while (a != 0)
+	while (a != 0) //mientras a sea diferente a 0
 	{
-		b++;
-		a /= 10;
+		b++; //sumamos 1 al contador
+		a /= 10; //dividimos a entre 10 para pasar al siguiente digito
 	}
 	return (b);
 }
