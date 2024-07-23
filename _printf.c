@@ -13,11 +13,11 @@ int _printf(const char *format, ...)
 	int b = 0;
 
 	va_start(a, format);
-	for (i = 0; format[i] != '\0'; i++)
+	for (i = 0; format[i] != '\0'; i++) //recorremos format
 	{
-		if (format[i] == '%')
+		if (format[i] == '%') //si es %
 		{
-			i++;
+			i++; //mover al siguiente para identificar formato
 			if (format[i] == '\0')
 			{
 				va_end(a);
@@ -25,26 +25,26 @@ int _printf(const char *format, ...)
 			}
 			switch (format[i])
 			{
-				case 'c':
-					b += print_char(a);
+				case 'c': //si es un caracter
+					b += print_char(a); //llamar a print_char y actualizar b
 					break;
-				case 's':
-					b += print_string(a);
+				case 's': //si es un string
+					b += print_string(a); //llamar a print_string y actualizar b
 					break;
-				case '%':
+				case '%': //si es %
 					b += print_porcentaje(a);
 					break;
-				case 'i':
+				case 'i': //si es entero
 				case 'd':
-					b += print_int(a);
+					b += print_int(a); //llamar a print_int y actualizar b
 					break;
-				default:
-					b += _write_char('%');
-					b += _write_char(format[i]);
+				default: //si no es ninguno de los anteriores
+					b += _write_char('%'); //imprime %
+					b += _write_char(format[i]); //imprime el caracter
 			}
 		}
-		else
-			b += _write_char(format[i]);
+		else //si no es un porcentaje
+			b += _write_char(format[i]); //imprime cualquier otro de los caracteres
 	}
 	va_end(a);
 	return (b);
