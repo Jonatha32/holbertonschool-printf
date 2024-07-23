@@ -44,7 +44,7 @@ Our _printf allows you to print anything, including the following types: strings
 
 _printf supports the following format specifiers:
 + `%c`: Prints a character.
-+ `%c`: Prints a string of characters.
++ `%s`: Prints a string of characters.
 + `%d` and `%i`: Print a integer
 + `%%`: Print a percentage
 
