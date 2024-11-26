@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdarg.h>
 
 /**
  *
@@ -8,7 +9,7 @@
 int _printf(const char *format, ...)
 {
 	va_list arg;
-	int i;
+	int i, printed = 0;
 
 	va_start(arg, format);
 
@@ -25,7 +26,7 @@ int _printf(const char *format, ...)
 					break;
 
 				case 'c':
-
+					printed += print_char(va_arg(arg, int));
 					break;
 
 				case 'd':
@@ -42,4 +43,5 @@ int _printf(const char *format, ...)
 			}
 		}
 	}
+	return (printed);
 }
