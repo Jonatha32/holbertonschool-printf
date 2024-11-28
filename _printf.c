@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdarg.h>
 
 /**
  *
@@ -8,40 +7,18 @@
 
 int _printf(const char *format, ...)
 {
-	va_list arg;
-	int i, printed = 0;
+	int char_count = 0;
+	const char *p;
 
-	va_start(arg, format);
+	if (format == NULL)
+		return -1;
 
-	for (i = 0; format[i] != '\0'; i++)
+	for (p = format; *p != '\0'; p++)
 	{
-		if (format[i] == '%')
-		{
-			i++;
-
-			switch (format[i])
-			{
-				case 's':
-
-					break;
-
-				case 'c':
-					printed += print_char(va_arg(arg, int));
-					break;
-
-				case 'd':
-					printed += print_number(va_arg(arg, int));
-					break;
-
-				case '%':
-
-					break;
-
-				default:
-
-					break;
-			}
-		}
+		write(1, p, 1);
+		char_count++;
 	}
-	return (printed);
+
+	write(1, "\n", 1);
+	return (char_count);
 }
