@@ -30,7 +30,7 @@ int _printf(const char *format, ...)
 					break;
 
 				case 'd':
-
+					printed += print_number(va_arg(arg, int));
 					break;
 
 				case '%':
