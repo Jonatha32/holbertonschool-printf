@@ -16,8 +16,10 @@ int _printf(const char *format, ...)
 			switch (format[i])
 			{
 				case 's':
+					printed += print_string(va_arg(arg, char *));
 					break;
 				case 'c':
+					printed += print_char(va_arg(arg, int));
 					break;
 				case 'd':
 					printed += print_number(va_arg(arg, int));
@@ -25,6 +27,8 @@ int _printf(const char *format, ...)
 				case '%':
 					break;
 				default:
+					write(1, format, 1);
+					printed++;
 					break;
 			}
 		}

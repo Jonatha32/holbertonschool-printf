@@ -11,5 +11,6 @@
 int main(void)
 {
 	_printf("Xara");
+	_printf("%s\n", "Another String");
 	return (0);
 }
