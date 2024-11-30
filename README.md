@@ -1,10 +1,10 @@
-# _Printf Project 🖥️
+# _Printf
 
-## Description of the project 📝
+## 📝 Description of the project
 
-Create your own _printf function
+_printf is a custom implementation of the standard C function printf. This project is part of an educational challenge to understand how text formatting functions work in C and how variable arguments are handled using stdarg.h.
 
-## What is a printf function?  😕
+## 😕 What is a printf function?
 
 The printf function (which derives its name from “print formatted”) prints a message to the screen using a “format string” that includes instructions for mixing multiple strings into the final string to display on the screen.
 
@@ -12,16 +12,17 @@ printf is a special function because it receives a variable number of parameters
 
 The “%” symbol denotes the beginning of the format mark. The “%d” flag is replaced by the value of the counter variable and the resulting string is printed. The “\n” symbol represents a line break. The output, by default, is justified to the right of the total width that we found given to the field, which by default has the length of the string as its length.
 
-## Flowchart 🦁
+## 🦁 Flowchart
 
-## Conversion Specifiers ⚠️
+## 🛑 **Especificadores soportados**
+| Especificador | Descripción                |
+|---------------|----------------------------|
+| `%c`          | Imprime un carácter        |
+| `%s`          | Imprime una cadena         |
+| `%d` / `%i`   | Imprime números enteros    |
+| `%%`          | Imprime un porcentaje (`%`)|
 
-+ %s - print strings
-+ %d - print integer
-+ %c - print char
-+ %% - print percent
-
-## Curriculum Topics We Use 💥
+## 💥 Curriculum Topics We Use 
 
 + Variadic Functions
 + Malloc
