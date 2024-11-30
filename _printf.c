@@ -3,7 +3,7 @@
 /**
  * _printf - Custom printf function
  * @format: format string
- * Return: int with the format string character count
+ * Return: (int) number of characters printed or -1 on error
  */
 
 int _printf(const char *format, ...)
@@ -30,6 +30,10 @@ int _printf(const char *format, ...)
 					break;
 				case 's':
 					handle_string(args, &char_count);
+					break;
+				case 'd':
+				case 'i':
+					handle_integer(args, &char_count);
 					break;
 				default:
 					write(1, "%", 1);
