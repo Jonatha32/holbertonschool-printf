@@ -28,6 +28,9 @@ int _printf(const char *format, ...)
 				case 'c':
 					handle_char(args, &char_count);
 					break;
+				case 's':
+					handle_string(args, &char_count);
+					break;
 				default:
 					write(1, "%", 1);
 					write(1, p, 1);
