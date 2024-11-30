@@ -25,6 +25,9 @@ int _printf(const char *format, ...)
 				case '%':
 					handle_percent(&char_count);
 					break;
+				case 'c':
+					handle_char(args, &char_count);
+					break;
 				default:
 					write(1, "%", 1);
 					write(1, p, 1);
