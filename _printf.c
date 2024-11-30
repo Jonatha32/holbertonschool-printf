@@ -1,37 +1,45 @@
 #include "main.h"
+
 /**
- *
- *
+ * _printf - Custom printf function
+ * @format: format string
+ * Return: int with the format string character count
  */
+
 int _printf(const char *format, ...)
 {
-	va_list arg;
-	int i, printed = 0;
-	va_start(arg, format);
-	for (i = 0; format[i] != '\0'; i++)
+	int char_count = 0;
+	const char *p;
+	va_list args;
+
+	va_start(args, format);
+
+	for (p = format; *p != '\0'; p++)
 	{
-		if (format[i] == '%')
+		if (*p == '%')
 		{
-			i++;
-			switch (format[i])
+			p++;
+
+			switch (*p)
 			{
-				case 's':
-					printed += print_string(va_arg(arg, char *));
-					break;
-				case 'c':
-					printed += print_char(va_arg(arg, int));
-					break;
-				case 'd':
-					printed += print_number(va_arg(arg, int));
-					break;
 				case '%':
+					handle_percent(&char_count);
 					break;
 				default:
-					write(1, format, 1);
-					printed++;
+					write(1, "%", 1);
+					write(1, p, 1);
+					char_count += 2;
 					break;
 			}
 		}
+		else
+		{
+			write(1, p, 1);
+			char_count++;
+		}
+
 	}
-	return (printed);
+
+	va_end(args);
+	return (char_count);
 }

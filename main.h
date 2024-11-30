@@ -5,6 +5,7 @@
 #include <unistd.h>
 
 int _printf(const char *format, ...);
+void handle_percent(int *);
 int print_char(int);
 int print_string(char *);
 int print_percent(int p);
