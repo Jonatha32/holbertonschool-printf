@@ -1,5 +1,11 @@
 #include "main.h"
 
+/**
+ * int_to_string - convert int to string
+ * @num: number
+ * @buffer: buffer
+ */
+
 void int_to_string(int num, char *buffer)
 {
 	int is_negative = 0;
@@ -33,6 +39,11 @@ void int_to_string(int num, char *buffer)
 
 	reverse_string(buffer);
 }
+
+/**
+ * reverse_string - reverse a given string
+ * @str: string to reverse
+ */
 
 void reverse_string(char *str)
 {
