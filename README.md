@@ -38,6 +38,12 @@ The “%” symbol denotes the beginning of the format mark. The “%d” flag i
 + _printf: Main File
 + main.h: Prototype Archive
 + main.c: Test File
++ handle_char.c: Handle Char Arguments
++ handle_integer.c: Handle Integer Arguments
++ handle_percent.c: Handle Percent
++ handle_string.c: Handle String Arguments
++ int_to_string.c: Convert an Int to a String
++ Inicio.png: Flowchart Image
 
 ## 🛠️ **Use**
 
